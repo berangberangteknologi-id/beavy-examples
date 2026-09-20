@@ -46,7 +46,7 @@ Prompt:
 
 > "Add a GET /users/:id endpoint to that contract. It should return a JSON object with `id` (number), `name` (string), and `email` (string)."
 
-Your assistant calls `create_endpoint` to register the route, then defines the response shape for it — Beavy turns your plain-English description into a structured schema, no manual JSON Schema writing required.
+Your assistant calls `create_endpoint` to register the route, then calls `set_response_schema` to define the response shape — turning your plain-English description into a structured schema itself, with no manual JSON Schema writing required on your part. Beavy stores that schema as the endpoint's ground truth.
 
 **3. Get the mock**
 
@@ -66,7 +66,7 @@ Expected response — a realistic fake value matching the shape you described:
 }
 ```
 
-That's the loop: **describe it in English → Beavy defines the contract → Beavy serves a mock instantly.** Nothing downstream (a frontend, an integration test, a teammate) has to wait for a real backend to exist.
+That's the loop: **describe it in English to your AI assistant → your assistant defines the contract via Beavy's MCP tools → Beavy serves a mock instantly.** Nothing downstream (a frontend, an integration test, a teammate) has to wait for a real backend to exist.
 
 ## What's next
 
