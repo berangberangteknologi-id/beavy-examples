@@ -6,7 +6,7 @@ The flagship Beavy story: a frontend builds against a mock, a backend ships some
 
 - A frontend and backend team building in parallel against one shared contract, without blocking on each other.
 - A backend change that silently drifts from the agreed contract (a renamed/reshaped field — the most common way "it worked yesterday" breaks).
-- Beavy catching that drift automatically, the moment you ask it to validate — not when a bug report shows up next sprint.
+- Beavy catching that drift the moment you ask it to validate — not when a bug report shows up next sprint.
 
 ## Prerequisites
 
